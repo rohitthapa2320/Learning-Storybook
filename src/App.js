@@ -1,11 +1,15 @@
-import logo from './logo.svg';
-import './App.css';
+import {Provider} from 'react-redux';
+
+import './index.css';
+import store from './lib/store';
+import {InboxScreen} from './InboxScreen';
+
 
 function App() {
   return (
-    <div className="App">
-     <h1>Hello.. Welcome to Storybook...</h1>
-    </div>
+    <Provider store={store}>
+      <InboxScreen />
+    </Provider>
   );
 }
 
